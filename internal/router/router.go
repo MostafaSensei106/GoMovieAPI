@@ -18,8 +18,6 @@ func ExtractRoutes() {
 	r.HandleFunc(movieRoute, updateMovie).Methods(PUT)
 
 	fmt.Printf("Starting http server at port 8080\n")
-
-	http.ListenAndServe(":8080", r)
 	if err := http.ListenAndServe(":8080", r); err != nil {
 		log.Fatal(err)
 	}

@@ -70,10 +70,8 @@ func createMovie(w http.ResponseWriter, r *http.Request) {
 		})
 		return
 	}
-
 	movie.ID = strconv.Itoa(rand.Intn(10000))
 	movies_repo.Create(movie)
-
 	jsonResponse(w, http.StatusCreated, movie)
 }
 
