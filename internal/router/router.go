@@ -5,16 +5,12 @@ import (
 )
 
 func main() {
-
 	r := mux.NewRouter()
 
-	r.HandleFunc(moviesRoute, getMovies)
+	r.HandleFunc(moviesRoute, getMovies).Methods(GET)
+	r.HandleFunc(movieRoute, getMovie).Methods(GET)
+	r.HandleFunc(movieRoute, createMovie).Methods(POST)
+	r.HandleFunc(movieRoute, deleteMovie).Methods(DELETE)
+	r.HandleFunc(movieRoute, updateMovie).Methods(PUT)
 
-	r.HandleFunc(movieRoute, getMovie)
-
-	r.HandleFunc(movieRoute, createMovie)
-
-	r.HandleFunc(movieRoute, deleteMovie)
-
-	r.HandleFunc(movieRoute, updateMovie)
 }
