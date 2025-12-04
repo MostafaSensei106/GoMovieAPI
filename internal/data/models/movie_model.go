@@ -2,9 +2,9 @@ package models
 
 // Director
 type Director struct {
-	ID       string `json:"id"`
-	FistName string `json:"first_name"`
-	LastName string `json:"last_name"`
+	ID        string `json:"id"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
 }
 
 // Movie
